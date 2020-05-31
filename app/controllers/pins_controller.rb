@@ -23,8 +23,6 @@ class PinsController < ApplicationController
     end
   end
 
-  def show; end
-
   def edit; end
 
   def update
@@ -40,6 +38,11 @@ class PinsController < ApplicationController
     redirect_to root_path
   end
 
+  def upvote
+    @pin.upvote_by current_user
+    redirect_back(fallback_location: root_path)
+  end
+
   private
 
   def pin_params
@@ -48,5 +51,5 @@ class PinsController < ApplicationController
 
   def find_pin
     @pin = Pin.find(params[:id])
-end
+  end
 end
