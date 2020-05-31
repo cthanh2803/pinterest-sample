@@ -6,9 +6,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap-sass'
+gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'haml'
 gem 'jbuilder', '~> 2.7'
+gem 'jquery-masonry-rails'
+gem 'masonry-rails'
 gem 'mysql2', '>= 0.4.4'
 gem 'paperclip'
 gem 'puma', '~> 4.1'
@@ -17,7 +20,6 @@ gem 'sass-rails', '>= 6'
 gem 'simple_form'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
-
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
